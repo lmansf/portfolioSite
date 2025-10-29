@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tile</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <div>
+      <input type="number" id="numberInput" placeholder="Enter a number">
+      <div id="display"></div>
+    </div>
+
+
+    <p>Enter Numbers to see Popups.</p>
+    <!-- single tile element; visibility controlled via CSS and the 'show' class -->
+    <div id="tile" aria-hidden="true"></div>
+    <!-- Use relative path so the script loads correctly when file is opened or served -->
+    <script src="popup.js"></script>
+</body>
+</html>
