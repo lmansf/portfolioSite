@@ -1,9 +1,4 @@
     const tile=document.getElementById('tile');
-    // document.addEventListener('click',()=>{
-    //   tile.classList.add('show');
-    //   tile.setAttribute('aria-hidden','false');
-    // },{once:true});
-
 
     // Get DOM elements
 const input = document.getElementById('numberInput');
