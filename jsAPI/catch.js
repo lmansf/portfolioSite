@@ -49,3 +49,17 @@ function fillFormFromCookies() {
 
 // Call the function when the page loads
 window.onload = fillFormFromCookies;
+
+function saveMembershipCookieOnSubmit(event) {
+  const membershipInput = document.getElementById('membership');
+  if (!membershipInput) return;
+  const membership = membershipInput.value || '';
+  // encode value, set path and optional max-age (e.g., 30 days)
+  document.cookie = `membership=${encodeURIComponent(membership)}; path=/; max-age=${60 * 60 * 24 * 30}`;
+}
+
+// Attach listener to the form submit event so cookie is set before navigation
+const form = document.querySelector('form');
+if (form) {
+  form.addEventListener('submit', saveMembershipCookieOnSubmit);
+}
